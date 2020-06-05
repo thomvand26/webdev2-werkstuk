@@ -1,0 +1,20 @@
+.social {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        padding: 10px;
+        color: $color-secondary-lightest;
+        cursor: pointer;
+        font-size: 70px;
+        margin-right: 60px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+        
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}

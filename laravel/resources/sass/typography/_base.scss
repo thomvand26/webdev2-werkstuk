@@ -1,0 +1,16 @@
+* {
+    color: $color-secondary;
+}
+
+blockquote {
+    text-align: center;
+    margin: 0 auto;
+    color: $color-primary;
+    font-size: $font-size-x-large;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+p {
+    font-size: $font-size-large;
+}

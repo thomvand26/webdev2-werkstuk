@@ -1,0 +1,67 @@
+.donation {
+    &__page {
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 20px));
+        gap: 40px;
+        margin: 0 auto;
+        max-width: 100%;
+        width: fit-content;
+        padding: 20px;
+
+    }
+    
+    &__list {
+        display: grid;
+        height: fit-content;
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    &__container {
+        display: grid;
+        grid-template-columns: 120px auto;
+        max-width: 100%;
+        background-color: $color-primary;
+        padding: 20px;
+        height: fit-content;
+        font-size: $font-size-large;
+        
+        & * {
+            color: $color-white;
+        }
+        
+        &:nth-child(even) {
+            background-color: $color-secondary;
+        }
+    }
+    
+    &__name {
+        font-weight: bold;
+    }
+
+    &__amount {
+        font-size: $font-size-base;
+    }
+    
+    &__form {
+        width: 100vw;
+        max-width: 100%;
+        width: fit-content;
+    }
+
+    @include breakpoint(0px, $screen-md) {
+        &__page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        &__list {
+            margin-bottom: 40px;
+        }
+    }
+}

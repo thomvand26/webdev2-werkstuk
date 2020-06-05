@@ -1,0 +1,19 @@
+.pageTitle {
+    font-size: $font-size-xx-large;
+    color: $color-secondary;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: $line-height-small;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    max-width: 100vw;
+    overflow-wrap: break-word;
+}
+
+@include breakpoint(0, $screen-sm) {
+    .pageTitle {
+        font-size: 2.5rem;
+    }
+}
