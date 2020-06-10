@@ -8,6 +8,7 @@
                     <thead><tr>
                         <th>ID</th>
                         <th>{{ __('dashboard.Title') }}</th>
+                        <th>{{ __('dashboard.Order') }}</th>
                         <th>{{ __('dashboard.Intro') }}</th>
                         <th>{{ __('dashboard.Template') }}</th>
                         <th>{{ __('dashboard.Active') }}</th>
@@ -20,6 +21,7 @@
                             <tr>
                                 <td>{{ $page->id }}</td>
                                 <td>{{ $page->title }}</td>
+                                <td>{{ $page->order }}</td>
                                 <td>{{ Str::limit($page->intro, 50) }}</td>
                                 <td>{{ $page->template }}</td>
                                 <td>{{ $page->active }}</td>

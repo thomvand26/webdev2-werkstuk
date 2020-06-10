@@ -21,7 +21,6 @@ Route::get('/', function () {
 })->name('home');
 
 Route::prefix('dashboard')->as('dashboard.')->group(function() {
-    // Route::group(['middleware' => ['verified']], function () {
         Route::group([], function () {
             Route::get('/pages', 'DashboardController@getIndexPage')->name('pages.index');
             Route::get('/pages/create', 'DashboardController@getCreatePage')->name('pages.create');

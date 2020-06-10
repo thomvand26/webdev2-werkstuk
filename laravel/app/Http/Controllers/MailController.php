@@ -30,6 +30,6 @@ class MailController extends Controller
     public function subscribe(Request $r) {
         Newsletter::subscribeOrUpdate($r->email);
 
-        return redirect('contact');
+        return redirect()->back();
     }
 }

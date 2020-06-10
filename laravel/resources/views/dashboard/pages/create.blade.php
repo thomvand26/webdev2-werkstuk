@@ -31,6 +31,10 @@
                 </div>
             </div>
             <div class="input">
+                <label class="input__label" for="order">{{ __('dashboard.Order') }}</label>
+                <input class="input__field" type="number" name="order" id="order" min="0" required>
+            </div>
+            <div class="input">
                 <label class="input__label" for="template">{{ __('dashboard.Template') }}</label>
                 <input class="input__field" type="text" name="template" id="template" placeholder="{{ __('dashboard.Template') }}" required>
             </div>

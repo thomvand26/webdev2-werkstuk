@@ -16,6 +16,7 @@ return [
     'Visible' => 'Zichtbaar',
     'Invisible' => 'Onzichtbaar',
     'Key' => 'Sleutel',
+    'Order' => 'Volgorde',
     
     'CreatePageButton' => 'Pagina maken',
     'CreatePageTitle' => 'Pagina maken',

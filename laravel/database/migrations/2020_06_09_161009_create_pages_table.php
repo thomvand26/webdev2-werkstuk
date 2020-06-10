@@ -25,6 +25,8 @@ class CreatePagesTable extends Migration
             $table->text('content')->nullable();
 
             $table->tinyInteger('active')->default(1);
+
+            $table->integer('order');
             
             $table->timestamps();
         });

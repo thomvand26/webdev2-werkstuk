@@ -16,6 +16,7 @@ return [
     'Visible' => 'Visible',
     'Invisible' => 'Invisible',
     'Key' => 'Key',
+    'Order' => 'Order',
     
     'CreatePageButton' => 'Create Page',
     'CreatePageTitle' => 'Create page',

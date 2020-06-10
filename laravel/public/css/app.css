@@ -10968,6 +10968,7 @@ a.text-dark:focus {
 .articleCard__title {
   font-size: 1.125rem;
   font-weight: 900;
+  margin-bottom: 10px;
 }
 
 .articleCard__intro {
@@ -11246,6 +11247,7 @@ a.text-dark:focus {
 .donation__container {
   display: grid;
   grid-template-columns: 120px auto;
+  gap: 10px;
   max-width: 100%;
   background-color: #6fc13e;
   padding: 20px;

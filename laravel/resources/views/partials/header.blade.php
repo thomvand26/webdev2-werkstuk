@@ -11,16 +11,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 {{-- All Links --}}
                 <ul class="navbar-nav navbar--center">
-                    <li class="nav-item">
-                        <a class="nav-link @if ((Request::segment(1) ?? null) == 'news')nav-link--selected @endif" href="{{ route('news') }}">{{ __('pages.News') }}</a>
-                    </li>
-                    @foreach ($pages as $page)
-                        <li class="nav-item">
-                            <a class="nav-link @if ((Request::segment(1) ?? null) == $page->slug)nav-link--selected @endif" href="{{ '/' . $page->slug }}">{{ Lang::has('pages.' . $page->title, App::getLocale()) ? __('pages.' . $page->title) : $page->title }}</a>
-                        </li>
-                    @endforeach
+                    {{-- Add Links to created pages --}}
+                    @isset($navPages[0])
+                        @for ($i = 0; $i < count($navPages); $i++)
+                            @php
+                                $page = $navPages[$i];
+                            @endphp
+                            @if ($i == 1)
+                                {{-- Add Link to News page --}}
+                                <li class="nav-item">
+                                    <a class="nav-link @if ((Request::segment(1) ?? null) == 'news')nav-link--selected @endif" href="{{ route('news') }}">{{ __('pages.News') }}</a>
+                                </li>
+                            @endif
+                            <li class="nav-item">
+                                <a class="nav-link @if ((Request::segment(1) ?? null) == $page->slug)nav-link--selected @endif" href="{{ '/' . $page->slug }}">{{ Lang::has('pages.' . $page->title, App::getLocale()) ? __('pages.' . $page->title) : $page->title }}</a>
+                            </li>
+                        @endfor
+                    @endisset
                     @guest
                     @else
+                    {{-- Add Link to Dashboard page (when logged in) --}}
                     <li class="nav-item">
                         <a class="nav-link @if ((Request::segment(1) ?? null) == 'dashboard')nav-link--selected @endif" href="{{ route('dashboard.pages.index') }}">Dashboard</a>
                     </li>

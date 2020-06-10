@@ -37,6 +37,7 @@ class DashboardController extends Controller
         $page = new Page();
         $page->title = $r->title;
         $page->slug = Str::slug($r->title);
+        $page->order = $r->order;
         $page->active = $r->active;
         $page->template = $r->template;
         $page->intro = $r->intro;
@@ -57,6 +58,7 @@ class DashboardController extends Controller
 
         $page->title = $r->title;
         $page->slug = Str::slug($r->title);
+        $page->order = $r->order;
         $page->active = $r->active;
         $page->template = $r->template;
         $page->intro = $r->intro;

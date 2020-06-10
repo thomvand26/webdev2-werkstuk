@@ -11,7 +11,7 @@
                 <div class="articleCard__right">
                     <div class="articleCard__top">
                         <div class="articleCard__title">{{ $article->title }}</div>
-                        <div class="articleCard__intro">{{ Str::limit($article->intro, 50) }}</div>
+                        <div class="articleCard__intro">{{ Str::limit($article->intro, 300) }}</div>
                     </div>
                     <div class="articleCard__bottom">
                         <a class="button" href="{{ route('news.detail', $article->id) }}">{{ __('inputs.ArticleReadMoreButton') }}</a>
