@@ -14,7 +14,10 @@ class NewsController extends Controller
         ]);
     }
 
-    public function show(Article $article) {
+    public function show($slug) {
+        $article = Article::where('slug', $slug)->first();
+        if (!$article) abort('404');
+
         return view('news.detail', [
             'article' => $article,
         ]);

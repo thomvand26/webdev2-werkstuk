@@ -48,7 +48,7 @@ Route::prefix('dashboard')->as('dashboard.')->group(function() {
     });
 
 Route::get('/news/{page?}', 'NewsController@index')->name('news');
-Route::get('/articles/{article}', 'NewsController@show')->name('news.detail');
+Route::get('/articles/{slug}', 'NewsController@show')->name('news.detail');
     
 Route::post('/contact', 'MailController@postContact')->name('cantact.save');
 Route::post('/mail/subscribe', 'MailController@subscribe')->name('mail.subscribe');
